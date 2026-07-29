@@ -235,3 +235,10 @@ $RECYCLE.BIN/
 jsonify-aws-dotfiles
 
 dist/
+
+# Nix build output symlink
+result
+result-*
+
+# Claude Code local config
+.claude/

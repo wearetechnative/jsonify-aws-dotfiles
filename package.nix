@@ -8,6 +8,8 @@ buildGoModule rec {
 
   doCheck = false;
 
+  env.CGO_ENABLED = "0";
+
   vendorHash = "sha256-W6XVd68MS0ungMgam8jefYMVhyiN6/DB+bliFzs2rdk=";
 
   meta = with lib; {

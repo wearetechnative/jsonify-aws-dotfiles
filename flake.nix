@@ -1,7 +1,7 @@
 {
   description = "Convert aws config and credential files into a single JSON object" ;
 
-  inputs.nixpkgs.url = "nixpkgs/nixos-24.05";
+  inputs.nixpkgs.url = "nixpkgs/nixos-26.05";
 
   outputs = { self, nixpkgs }:
     let
@@ -10,8 +10,6 @@
       nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
     in
     {
-      nixosModules.default = import ./module.nix self;
-
       packages = forAllSystems (system:
         let
           pkgs = nixpkgsFor.${system};

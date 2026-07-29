@@ -10,7 +10,6 @@ import (
 	"encoding/json"
 	"strings"
 	"fmt"
-	"io/ioutil"
 	"strconv"
 )
 
@@ -59,7 +58,7 @@ func main() {
 		jsonBody := string(bytes)
 		fmt.Println(jsonBody)
 	} else {
-		ioutil.WriteFile(options.OutputFile, bytes, 0644)
+		os.WriteFile(options.OutputFile, bytes, 0644)
 	}
 }
 
